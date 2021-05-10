@@ -2,24 +2,24 @@ package arrays
 
 import "fmt"
 
-/*
-INSERTION SORT
-Can be remembered as deck of cards taken one by one
-
-Worst case:
-Time complexity (comparisons and movements): O(n^2)
-
-Best case:
-Time complexity: omega(n)
-
-For both cases:
-Space complexity: O(1)
-
-The time complexity of this algo cannot be reduced even by using binary search or linked list (instead of linear
-search and arrays)
-*/
-
 func InsertionSort(unsortedArray []int) {
+	/*
+		INSERTION SORT
+		Can be remembered as deck of cards taken one by one
+
+		Worst case:
+		Time complexity (comparisons and movements): O(n^2)
+
+		Best case:
+		Time complexity: omega(n)
+
+		For both cases:
+		Space complexity: O(1)
+
+		The time complexity of this algo cannot be reduced even by using binary search or linked list (instead of linear
+		search and arrays)
+	*/
+
 	arrayValues := unsortedArray
 	fmt.Printf("Array to sort is: %d, and length is: %d\n", arrayValues, len(arrayValues))
 	for i := 0; i < len(arrayValues); i++ {
