@@ -21,7 +21,7 @@ func InsertionSort(unsortedArray []int) {
 	*/
 
 	arrayValues := unsortedArray
-	fmt.Printf("Array to sort is: %d, and length is: %d\n", arrayValues, len(arrayValues))
+	fmt.Printf("Array to insert-sort is: %d, and length is: %d\n", arrayValues, len(arrayValues))
 	for i := 0; i < len(arrayValues); i++ {
 		key := arrayValues[i]
 		j := i - 1
