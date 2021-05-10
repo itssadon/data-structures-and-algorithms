@@ -19,24 +19,19 @@ The time complexity of this algo cannot be reduced even by using binary search o
 search and arrays)
 */
 
-func InsertionSort() []int {
-	arrayValues := []int{9, 6, 5, 0, 3, 4, 1, 2, 14, 10}
+func InsertionSort(unsortedArray []int) {
+	arrayValues := unsortedArray
+	fmt.Printf("Array to sort is: %d, and length is: %d\n", arrayValues, len(arrayValues))
 	for i := 0; i < len(arrayValues); i++ {
 		key := arrayValues[i]
 		j := i - 1
 		for j >= 0 && key < arrayValues[j] {
 			arrayValues[j+1] = arrayValues[j]
+			j--
 		}
 		arrayValues[j+1] = key
+		//j has been decremented so in the end will be at one less than the position desired, so adding one
 	}
 
-	fmt.Println("The sorted array is:")
-	// printArray(arrayValues, len(arrayValues))
-	return arrayValues
-}
-
-func printArray(a []int, n int) {
-	for i := 0; i < n; i++ {
-		fmt.Printf("%d", a[i])
-	}
+	fmt.Printf("The sorted array is: %d\n", arrayValues)
 }
