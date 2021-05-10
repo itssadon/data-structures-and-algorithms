@@ -1,15 +1,11 @@
 package main
 
 import (
-	"fmt"
-
 	"github.com/itssadon/data-structures-and-algorithms/arrays"
 )
 
 func main() {
-	fmt.Println("This is the main entrance of the program")
-
 	// Arrays
-	insertionSort := arrays.InsertionSort()
-	fmt.Println(insertionSort)
+	unsortedArray := []int{9, 6, 5, 0, 3, 4, 1, 2, 14, 10}
+	arrays.InsertionSort(unsortedArray)
 }
